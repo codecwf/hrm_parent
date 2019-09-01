@@ -12,14 +12,14 @@ import java.util.List;
 
 @FeignClient(value = "ZUUL-GATEWAY",configuration = FeignClientsConfiguration.class,
         fallbackFactory = ${entity}ClientHystrixFallbackFactory.class)
-@RequestMapping("/user/${table.entityPath}")
+@RequestMapping("/${table.entityPath}")
 public interface ${entity}Client {
     /**
      * 保存和修改公用的
      * @param ${table.entityPath}  传递的实体
      * @return Ajaxresult转换结果
      */
-    @RequestMapping(value="/save",method= RequestMethod.POST)
+    @RequestMapping(method= RequestMethod.POST)
     AjaxResult save(${entity} ${table.entityPath});
 
     /**
@@ -27,7 +27,7 @@ public interface ${entity}Client {
      * @param id
      * @return
      */
-    @RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
+    @RequestMapping(value="/{id}",method=RequestMethod.DELETE)
     AjaxResult delete(@PathVariable("id") Integer id);
 
     //获取用户
@@ -48,6 +48,6 @@ public interface ${entity}Client {
      * @param query 查询对象
      * @return PageList 分页对象
      */
-    @RequestMapping(value = "/json",method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.PATCH)
     PageList<${entity}> json(@RequestBody ${entity}Query query);
 }

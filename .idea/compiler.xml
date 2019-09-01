@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hrm_basic" />
         <module name="hrm_basic_util" />
+        <module name="hrm_config_server" />
+        <module name="hrm_config_server_8848" />
         <module name="hrm_eureka_7001" />
         <module name="hrm_mybaties_plus" />
         <module name="hrm_mybatiesplus_gen" />
@@ -21,6 +23,8 @@
       <module name="hrm_basic_parent" target="1.8" />
       <module name="hrm_basic_util" target="1.8" />
       <module name="hrm_config_parent" target="1.8" />
+      <module name="hrm_config_server" target="1.8" />
+      <module name="hrm_config_server_8848" target="1.8" />
       <module name="hrm_eureka_7001" target="1.8" />
       <module name="hrm_mybaties_plus" target="1.8" />
       <module name="hrm_mybatiesplus_gen" target="1.8" />
